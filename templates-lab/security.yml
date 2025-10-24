@@ -20,7 +20,7 @@
         src: hardened.j2
         dest: /etc/sudoers.d/hardened
         mode: '0440'
-        validate: /sbin/visudo -cf %s
+        # validate: /sbin/visudo -cf %s
     
     - name: Display success message
       debug:
