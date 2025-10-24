@@ -5,7 +5,7 @@
     # - name: list web servers
     #   debug:
     #     msg: "web servers are {{ groups['web']['ansible_host']|join(' ') }}"
-    - name: Display IP addresses of 'your_group_name'
+    - name: Display IP addresses of 'web'
       debug:
         msg: "IP addresses in 'your_group_name': {{ groups['web'] | map('extract', hostvars, ['ansible_default_ipv4', 'address']) | list }}"
 
