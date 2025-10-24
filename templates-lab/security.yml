@@ -2,6 +2,10 @@
 - hosts: all
   become: yes
   tasks:
+    - name: list web servers
+      debug:
+        msg: "web servers are {{ groups['web']|join(' ') }}"
+
     - name: Create directory for template deployment
       file:
         path: /home/ansible/lab-templates
