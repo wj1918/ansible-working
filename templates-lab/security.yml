@@ -4,7 +4,7 @@
   tasks:
     - name: list web servers
       debug:
-        msg: "web servers are {{ groups['web'].ansible_host|join(' ') }}"
+        msg: "web servers are {{ groups['web']['ansible_host']|join(' ') }}"
 
     - name: Create directory for template deployment
       file:
